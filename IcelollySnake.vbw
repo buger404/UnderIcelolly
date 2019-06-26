@@ -1,4 +1,4 @@
-GPage = -606, 159, 365, 589, Z
+GPage = -606, 159, 365, 589, 
 Gdiplus = 32, 32, 1003, 462, 
 Bass = 0, 0, 0, 0, C
 GCore = 96, 96, 849, 472, 
@@ -24,5 +24,6 @@ Animations = 0, 0, 0, 0, C
 GameWindow = 64, 64, 817, 440, , 32, 32, 785, 408, C
 MainPage = 128, 128, 881, 504, 
 Dialog = 96, 96, 849, 472, 
-BattlePage = 160, 160, 913, 536, 
+BattlePage = 148, 160, 913, 593, Z
 GameOverPage = 32, 32, 785, 408, 
+GCrashBox = 192, 192, 1163, 622, 

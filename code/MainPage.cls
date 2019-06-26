@@ -16,7 +16,7 @@ Attribute VB_Exposed = False
     Dim Page As GPage
     Dim br As Single, bg As Single, bb As Single, bt As Long
     Dim tr As Single, tg As Single, tb As Single
-    Dim OpenTime As Long, BattleTime As Long
+    Dim openTime As Long, BattleTime As Long
     Dim NoLoop As Boolean
 '======================================
     
@@ -84,7 +84,7 @@ Public Sub Update()
         Page.DrawImageEx "icebig.png", GW / 2, GH / 2 - 80, 128, 128, Pos:=posOnCenter
     End If
     
-    If GetTickCount - OpenTime >= 8000 And Dialog.diaChar = "" Then
+    If GetTickCount - openTime >= 8000 And Dialog.diaChar = "" Then
         Dialog.NewDialog "你好，我是冰棍。", "say.wav", 100
         Dialog.NewDialog "你最好的朋友，冰棍。", "say.wav", 80
         Dialog.NewDialog "...", "say.wav", 200
@@ -135,12 +135,13 @@ Private Sub Class_Initialize()
     
     Set BGM = New GMusic
     BGM.Create App.path & "\music\Barrier.mp3"
+    BGM.Volume = 0.3
     BGM.Play
 
     '创建页面
     ECore.Add Page, "MainPage"
     
-    OpenTime = GetTickCount
+    openTime = GetTickCount
     
     '===============================================
     '   如果需要添加动画，请放置在此处
